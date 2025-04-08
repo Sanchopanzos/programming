@@ -6,6 +6,64 @@
     <title>Основы JS</title>
 </head>
 <body>
-    
+    <h1>ЯП JavaScript</h1>
+
+    <script>
+        
+        // let str = "'Hello, World'";
+        // console.log(str);
+
+        // let a,b;
+        // a = 16;
+        // b = 5;
+        // console.log(a%b);
+
+        // console.log(15 / 2);
+
+        // console.log(Math.ceil(19/5)); // в большую
+        // console.log(Math.round(19/5)); // по правилам математики
+        // console.log(Math.floor(18/5)); // округление в меньшую
+
+        // a = 1;
+        // b = a++; // из-за a++, сначало b = a, а потом a++   
+        // console.log(a, b);
+
+        // a = 1;
+        // b = ++a; // из-за ++a, сначало a++, а потом b = a
+        // console.log(a, b);
+
+
+        // let x1, x2, sum;
+        // x1 = parseFloat(prompt("Введите первое число: "));
+        // x2 = parseFloat(prompt("Введите второе число: "));
+        // sum = x1 + x2;
+        // alert("Сумма равна " + sum);
+
+
+        // let countInFolder, countInPage, countOfPages;
+        
+        // countInFolder = parseInt(prompt("Введите кол-во фоток в папке ", 1)); // ,1 - значение по умолчанию
+        // countInPage = parseInt(prompt("Введите кол-во фоток на странице ", 1));
+        // countOfPages = Math.ceil(countInFolder/countInPage);
+
+        // alert("Вам понадобится " + countOfPages + " страницы");
+
+
+        /* Дано шестизначное число, найти сумму его цифр */ 
+        
+        let number, d1, d2, d3, d4, d5, d6;
+        number = parseInt(prompt("Введите шестизначное число"));
+        
+        d1 = number % 10; //единицы - самое последнее число
+        d2 = Math.floor(number / 10) % 10; // number / 10 - благодаря этому отбросим посл число
+        d3 = Math.floor(number / 100) % 10; 
+        d4 = Math.floor(number / 1000) % 10; 
+        d5 = Math.floor(number / 10000) % 10; 
+        d6 = Math.floor(number / 100000) % 10; 
+        alert(d1);
+        alert(d1+d2+d3+d4+d5+d6);
+
+    </script>
+
 </body>
 </html>
