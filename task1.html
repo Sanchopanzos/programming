@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простейшие программы</title>
+</head>
+<body>
+    
+    <script>
+
+        // Даны стороны прямоугольника. Найти его периметр и длину диагонали.
+        // let a, b, perimetr, lenghtOfDiagonal;
+        // a = parseFloat(prompt("Введите сторону a: "));
+        // b = parseFloat(prompt("Введите сторону b: "));
+
+        // perimetr = a*a + b*b;
+        
+        // lenghtOfDiagonal = Math.sqrt( Math.pow(a, 2) + Math.pow(b, 2) );
+        
+        // alert("Периметр " + perimetr);
+        // alert("Длина диагонали " + lenghtOfDiagonal);
+
+
+        // Дано расстояние в сантиметрах. Найти число полных метров в нем.
+        // let santimetrs, metrs;
+
+        // santimetrs = parseFloat(prompt("Введите количество сантиметров"));
+        // metrs = Math.floor(santimetrs / 100);
+        // alert("Кол-во метров: " + metrs);
+
+
+        //  Дано натуральное число n (n > 9). Найти:
+        // а) число единиц в нем;
+        // б) число десятков в нем
+
+        let number, d1, d2;
+        number = parseFloat(prompt("Введите натуральное число n > 9: "));
+        d1 = number % 10; // единицы - самое последнее число. Остаток от деления
+        d2 = Math.floor(number / 10) % 10; // number / 10 - благодаря этому отбросим посл число
+
+        alert("Число единиц: " + d1 + " || " + "Число десятков: " + d2);
+
+    </script>
+
+</body>
+</html>
