@@ -1,4 +1,4 @@
-// --- ЗАДАНИЕ 1 ---
+// === ЗАДАНИЕ 1 ===
 const p1 = document.querySelector(".test-text");
 p1.textContent = "Hello, World! I am Sanchopanzos";
 
@@ -8,7 +8,7 @@ p1.style.backgroundColor = "lightblue";
 p1.style.color = "blue";
 p1.style.marginBottom = "20px";
 
-// --- ЗАДАНИЕ 2 ---
+// === ЗАДАНИЕ 2 ===
 
 document.getElementById("email").value = "mail@mail.ru";
 document.getElementById("email").disabled = true;
@@ -17,10 +17,10 @@ document.getElementById("remember").checked = true;
 
 document.getElementById("btn").textContent = "Enter";
 
-// --- ЗАДАНИЕ 3 ---
+// === ЗАДАНИЕ 3 ===
 const link = document.createElement("a");
 link.href = "https://portal.midis.info/stream/";
-link.textContent = "ссылка на сайт";
+link.textContent = "link";
 link.target = "_blank";
 link.style.textDecoration = "none";
 link.style.color = "blue";
@@ -37,3 +37,27 @@ link.addEventListener("mouseout", () => {
 });
 
 document.getElementById("link-container").appendChild(link);
+
+// === ЗАДАНИЕ 4 ===
+const ball = document.getElementById("ball");
+const startBtn = document.getElementById("startBtn");
+
+startBtn.style.marginBottom = "40px";
+
+let animationFrame;
+let currentY = 350;
+
+function moveBallUp() {
+  if (currentY > 20) {
+    currentY -= 5;
+    ball.setAttribute("cy", currentY);
+    animationFrame = requestAnimationFrame(moveBallUp);
+  } else {
+    cancelAnimationFrame(animationFrame);
+  }
+}
+
+startBtn.addEventListener("click", () => {
+  currentY = 350; // сброс позиции
+  moveBallUp();
+});
