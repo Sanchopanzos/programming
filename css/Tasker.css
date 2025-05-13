@@ -31,3 +31,15 @@
     margin-left: 10px;
     font-weight: bold;
 }
+
+.btn-edit, .btn-remove{
+    color: darkblue;
+    margin-left: 5px;
+    transition: color 1s;
+}
+.btn-edit:hover,
+.btn-edit:focus,
+.btn-remove:hover,
+.btn-remove:focus{
+    color: darkorchid;
+}
